@@ -3,13 +3,15 @@
 PROMPT=""
 #Comment out which ever fields you don't want
 #Show user@host
-PROMPT+='%F{magenta}%n@%m%f'
+#PROMPT+='%F{magenta}%n@%m%f'
+#Show user@host
+PROMPT+='%F{magenta}%m%f'
 #Show date 
 PROMPT+='%F{yellow}(%D %*)%f'
 #Show error on wrong bash command
 PROMPT+='%(?:%F{green}➜ :%F{red}➜ )%f'
 #Show direcotry info. %~ shows full from home. %2~ shows last 2 directories. You can use any numeric value.
-PROMPT+=' %F{cyan}%~%f'
+PROMPT+='%F{cyan}%2~%f'
 #Show git specific things
 PROMPT+='%{$reset_color%}%B$(git_prompt_info)$(git_prompt_status)%b '
 
